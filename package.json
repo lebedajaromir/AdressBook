@@ -1,0 +1,58 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "description": "RESTful API in Node.js for an AddressBook",
+  "main": "app.js",
+  "scripts": {
+    "test-old": "NODE_ENV=test mocha --config .mocharc.js",
+    "coverage": "nyc report --reporter=json",
+    "test": "mocha ./tests/*.js  --timeout 5000",
+    "start": "node src/app.js",
+    "dev": "NODE_ENV=dev nodemon src/app.js",
+    "migrate": "npx knex migrate:latest --cwd ./src/database --knexfile ./../config/knexfile.js",
+    "seed": "npx knex seed:run --cwd ./src/database --knexfile ./../config/knexfile.js",
+    "lint": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lebedajaromir/AdressBook.git"
+  },
+  "keywords": [
+    "adress",
+    "book"
+  ],
+  "author": "Jaromir Lebeda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lebedajaromir/AdressBook/issues"
+  },
+  "homepage": "https://github.com/lebedajaromir/AdressBook#readme",
+  "devDependencies": {
+    "@strv/eslint-config-javascript": "^9.2.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.11",
+    "nyc": "^14.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^7.0.0",
+    "firebase-admin": "^7.3.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.16.5",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "objection": "^1.6.8",
+    "pg": "^7.10.0",
+    "pino": "^5.12.3",
+    "ramda": "^0.26.1"
+  }
+}

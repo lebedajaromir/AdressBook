@@ -1,0 +1,38 @@
+version: '3'
+services:
+  database:
+    image: sameersbn/postgresql:latest
+    container_name: adressbook-users-db
+    environment:
+      - DB_NAME=adressbook-users,adressbook-users-test
+      - PG_TRUST_LOCALNET=true
+    ports:
+     - "5432:5432"
+    networks:
+      adressbook_net:
+          ipv4_address: 172.28.1.1  
+  server:
+    build: .
+    container_name: adressbook
+    depends_on: 
+      - database
+    environment:
+      DB_SERVER: 172.28.1.1
+    command:
+        - bash
+        - c 
+        |
+        export DB_SERVER=172.28.1.1
+        npm run dev
+    ports:
+      - 3000:3000
+    networks:
+      adressbook_net:
+          ipv4_address: 172.28.1.2   
+networks:
+  adressbook_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+
