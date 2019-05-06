@@ -9,7 +9,7 @@
   "scripts": {
     "test-old": "NODE_ENV=test mocha --config .mocharc.js",
     "coverage": "nyc report --reporter=json",
-    "test": "mocha ./tests/*.js  --timeout 5000",
+    "test": "nyc mocha ./tests/*.js  --timeout 5000 --exit",
     "start": "node src/app.js",
     "dev": "NODE_ENV=dev nodemon src/app.js",
     "migrate": "npx knex migrate:latest --cwd ./src/database --knexfile ./../config/knexfile.js",

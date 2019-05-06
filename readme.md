@@ -95,7 +95,7 @@ curl -v -d '{"email":"user@gmail.com", "password":"pwd"}' -H "Content-Type: appl
 Login user:
 curl -v -d '{"email":"user@gmail.com", "password":"pwd"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/session/user
 Create contact:
-curl -v -d '{"email":"usergmail.com", "fname":"jaromir","lname":"jagr", "phone": 123456789 }' -H "Content-Type: application/json"  -H "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJwd2QiLCJpYXQiOjE1NTY5MTUzNjcsImV4cCI6MTU1NjkxODk2NywiaXNzIjoiY29tLmphbGUuYWRyZXNzLWJvb2subG9jYWwifQ.dHmHhhmiYHSoyD7yixA3iRoOjs-HtNYXP7SF4xVUnHc" -X POST http://localhost:3000/api/contacts
+curl -v -d '{"email":"usergmail.com", "fname":"jaromir","lname":"jagr", "phone": 123456789 }' -H "Content-Type: application/json"  -H "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTU1NzE2MzE2NiwiZXhwIjoxNTU3MTY2NzY2LCJpc3MiOiJjb20uamFsZS5hZHJlc3MtYm9vay5sb2NhbCJ9.SpJPXRTnK2SyOCj5WHdl3LL7L5yiHiUarUeQ1pyPI1A" -X POST http://localhost:3000/api/contacts
 
 Run migrations: npx knex migrate:latest --cwd ./src/database --knexfile ./../config/knexfile.js
 Run seed: npx knex seed:run --cwd ./src/database --knexfile ./../config/knexfile.js
@@ -137,3 +137,12 @@ https://firebase.google.com/docs/admin/setup
 
 Start in test mode
 Get set up quickly by allowing all reads and writes to your database 
+
+### firebase mock
+https://github.com/soumak77/firebase-mock/blob/HEAD/tutorials/functions/firestore.md
+
+
+
+### 
+avoid pishing https://stackoverflow.com/questions/41287108/deploying-firebase-app-with-service-account-to-heroku-environment-variables-wit
+https://stackoverflow.com/questions/42109813/node-js-environment-variables-and-heroku-deployment?rq=1

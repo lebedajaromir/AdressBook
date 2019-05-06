@@ -4,13 +4,11 @@
 // eslint-disable-next-line no-process-env
 process.env.NODE_ENV = 'test'
 
-
 const chai = require('chai')
 const chaiHttp = require('chai-http')
 const app = require('./../src/app').app
 const { truncateUsersDB, seedUsersDB } = require('./../src/database/index')
 const crypto = require('./../src/utils/crypto')
-
 
 const { expect } = chai
 
@@ -38,7 +36,7 @@ describe('Testing Users', () => {
       expect(response.body).to.have.property('id')
       expect(response.body).to.have.property('email')
     })
-    it('should return 409 -  conflict error - user exists', async () => {
+    it('should return 409 - conflict error - user exists', async () => {
       const response = await chai.request(server)
         .post('/api/users')
         .send({
@@ -47,7 +45,7 @@ describe('Testing Users', () => {
         })
       expect(response).to.have.status(409)
     })
-    it('should return 400 bad request / validation error - email missing', async () => {
+    it('should return 400 - bad request / validation error - email missing', async () => {
       const response = await chai.request(server)
         .post('/api/users')
         .send({
@@ -78,9 +76,16 @@ describe('Testing Users', () => {
       const jwtPayload = await crypto.verifyAccessToken(response.body.accessToken)
       expect(jwtPayload && jwtPayload.exp && Date.now() < jwtPayload.exp * 1000).to.be.true
     })
+    it('should return 401 - user is not logged in (wrong password)', async () => {
+      const response = await chai.request(server)
+        .post('/api/session/user')
+        .send({
+          email: 'test@test.com',
+          password: 'wrongpd',
+        })
+      expect(response).to.have.status(401)
+    })
   })
-
-
   after(async () => {
     await app.stop()
   })

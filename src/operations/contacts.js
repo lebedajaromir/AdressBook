@@ -16,7 +16,6 @@ async function create(user, input) {
   return created
 }
 
-
 module.exports = {
   create,
 }

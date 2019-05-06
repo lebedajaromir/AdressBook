@@ -30,5 +30,10 @@ module.exports = env => ({
     stdout: true,
     minLevel: 'debug',
 },
+  firestore: {
+    privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+  },
   
 })
