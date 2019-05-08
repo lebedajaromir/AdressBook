@@ -11,9 +11,9 @@ services:
   - docker
 env:
   global:
-- NODE_ENV=test
+    - NODE_ENV=test
 install:
-- npm install
+  - npm install
 
 before_script:
   - sudo service postgresql stop
@@ -21,7 +21,7 @@ before_script:
   - sleep 10
   - npm run migrate:test
 script:
-   - "npm run test"
+  - "npm run test"
 
 deploy:
   provider: heroku
