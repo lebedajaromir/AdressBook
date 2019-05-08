@@ -6,12 +6,11 @@ const firebase = require('firebase-admin')
 const knexConfig = require('../config/knexfile')
 const config = require('./../config')
 // const firestoreServiceAccount = require('./../../firebase-service-account.json')
-
+const User = require('./postgres/models/user.js')
 
 async function connectUsersDB() {
   const knex = Knex(knexConfig)
-  await knex.raw("SELECT '1=1';")
-  Model.knex(knexConfig)
+  Model.knex(knex)
 }
 
 function connectContactsDB() {

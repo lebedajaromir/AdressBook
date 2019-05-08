@@ -9,7 +9,7 @@ module.exports = {
   // connection: 'postgresql://postgres@localhost:5432/adressbook-users',
   migrations: {
     tableName: 'migrations',
-    directory: path.resolve(__dirname, './../database/migrations'),
+    directory: path.resolve(__dirname, './../database/postgres/migrations'),
     // directory: './../database/postgres/migrations',
 
   },
