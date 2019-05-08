@@ -28,5 +28,8 @@ deploy:
   api_key:
     secure: 422421e8-78b7-4a8f-9c13-87958c039f40
   app: strv-addressbook-lebeda-j
+  strategy: git
   on:
+    branch:
+      - master
     repo: lebedajaromir/AdressBook
