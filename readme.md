@@ -7,6 +7,7 @@ curl -v -d '{"email":"user@gmail.com", "password":"pwd"}' -H "Content-Type: appl
 Login user:
 
 curl -v -d '{"email":"user@gmail.com", "password":"pwd"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/session/user
+
 Create contact:
 
 curl -v -d '{"email":"email@email.cz", "fname":"FNAME","lname":"LNAME", "phone": 1 }' -H "Content-Type: application/json"  -H "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTU1NzE2MzE2NiwiZXhwIjoxNTU3MTY2NzY2LCJpc3MiOiJjb20uamFsZS5hZHJlc3MtYm9vay5sb2NhbCJ9.SpJPXRTnK2SyOCj5WHdl3LL7L5yiHiUarUeQ1pyPI1A" -X POST http://localhost:3000/api/contacts
