@@ -5,7 +5,7 @@ const Knex = require('knex')
 const firebase = require('firebase-admin')
 const knexConfig = require('../config/knexfile')
 const config = require('./../config')
-//const firestoreServiceAccount = require('./../../firebase-service-account.json')
+// const firestoreServiceAccount = require('./../../firebase-service-account.json')
 
 
 async function connectUsersDB() {
@@ -18,16 +18,16 @@ function connectContactsDB() {
   // firebase.initializeApp({
   // credential: firebase.credential.cert(firestoreServiceAccount),
   // })
-
   firebase.initializeApp({
     credential: firebase.credential.cert({
-      private_key: config.firebase.privateKey,
-      project_id: config.firebase.projectId,
-      client_email: config.firebase.clienEmail,
+      private_key: config.firestore.privateKey,
+      project_id: config.firestore.projectId,
+      client_email: config.firestore.clientEmail,
 
     }),
   })
 }
+
 
 async function truncateUsersDB(table) {
   const knex = Knex(knexConfig)

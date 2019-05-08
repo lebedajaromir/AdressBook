@@ -8,11 +8,11 @@ services:
       - PG_TRUST_LOCALNET=true
     ports:
      - "5432:5432"
-  server:
-    build: .
-    container_name: adressbook
-    depends_on: 
-      - database
-    command: npm run dev
-    ports:
-      - 3000:3000
+ # server:
+ #   build: .
+ #   container_name: adressbook
+ #   depends_on: 
+ #     - database
+ #   command: npm run dev
+ #   ports:
+ #     - 3000:3000

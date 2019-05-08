@@ -29,11 +29,11 @@ module.exports = env => ({
     enabled: true,
     stdout: true,
     minLevel: 'debug',
-},
+  },
   firestore: {
-    privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/ug, '\n'),
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
   },
-  
+
 })

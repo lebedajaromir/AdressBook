@@ -9,7 +9,7 @@ async function authenticate(ctx, next) {
   if (!ctx.header.authorization) {
     throw new errors.UnauthorizedError()
   }
-  
+
   const input = { jwtToken: ctx.header.authorization }
 
   validate(schema, input)

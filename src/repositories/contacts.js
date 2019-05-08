@@ -12,12 +12,12 @@ async function create(user, input) {
     phone: input.phone,
   })
   return docRef.id
-  /*.then(docRef => {
-    console.log(docRef.id)
-  })
-    .catch(error => {
-      console.error('Error adding document: ', error)
-    })*/
+  // .then(docRef => {
+  // console.log(docRef.id)
+  // })
+  // .catch(error => {
+  // console.error('Error adding document: ', error)
+  // })
 }
 
 
