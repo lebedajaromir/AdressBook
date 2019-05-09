@@ -5,4 +5,5 @@ build:
 release:
   command:
     - npm run migrate
+    - npm start
 image: web
