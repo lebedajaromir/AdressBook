@@ -21,9 +21,9 @@ module.exports = env => ({
     },
   },
   db: {
-    host: process.env.DB_SERVER || 'localhost',
-    user: process.env.DB_USER || 'postgres',
-    dbname: process.env.DB_NAME || 'adressbook-users',
+    host: process.env.DB_SERVER,
+    user: process.env.DB_USER,
+    dbname: process.env.DB_NAME,
   },
   logger: {
     enabled: true,

@@ -12,5 +12,6 @@ module.exports = {
   db: {
     dbserver: 'localhost',
     dbname: 'adressbook-users-test',
+    user: 'postgres',
   },
 }

@@ -1,7 +1,0 @@
-
-> addressbook@1.0.0 start /c/AddressBook
-> node src/app.js
-
-{"level":30,"time":1557058510826,"pid":3555,"hostname":"jale-ntb","name":"addressbook","msg":"Starting app…","v":1}
-{"level":30,"time":1557058510978,"pid":3555,"hostname":"jale-ntb","name":"addressbook","msg":"App is running","v":1}
-{"level":30,"time":1557058907406,"pid":3555,"hostname":"jale-ntb","name":"addressbook","msg":"Stopping app…","v":1}

@@ -5,7 +5,7 @@ const config = require('./index')
 
 module.exports = {
   client: 'pg',
-  connection: { host: config.db.host, user: config.db.user, database: config.db.dbname },
+  connection: config.db.host ? config.db.dburl : { host: config.db.host, user: config.db.user, database: config.db.dbname },
   // connection: 'postgresql://postgres@localhost:5432/adressbook-users',
   migrations: {
     tableName: 'migrations',

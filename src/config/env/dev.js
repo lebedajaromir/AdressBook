@@ -5,6 +5,8 @@ module.exports = {
     port: 3000,
   },
   db: {
-    host: 'adressbook-users-db',
+    dbserver: 'localhost',
+    dbname: 'adressbook-users',
+    user: 'postgres',
   },
 }
