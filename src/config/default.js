@@ -3,7 +3,7 @@
 module.exports = env => ({
   env,
   server: {
-    port: process.env.PORT || 80,
+    port: process.env.PORT,
   },
   auth: {
     secret: process.env.AUTH_SECRET
