@@ -14,12 +14,9 @@ function connectUsersDB() {
 }
 
 function connectContactsDB() {
-  console.log(config.firestore.privateKey)
-  console.log(config.firestore.projectId)
-  console.log(config.firestore.clientEmail)
   firebase.initializeApp({
     credential: firebase.credential.cert({
-      private_key: config.firestore.privateKey,
+      private_key: config.firestore.privateKey.replace(/\\n/gu, '\n'),
       project_id: config.firestore.projectId,
       client_email: config.firestore.clientEmail,
     }),
