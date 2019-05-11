@@ -1,4 +1,19 @@
-### My tests.
+### AddressBook API project.
+
+Simple AddressBook api project. Allows clients to register new users and logging in existing users. Logged in users can create new contacts. Each user has his own set of contacts.
+
+Project file structure:
+```    
+    src/
+      config/
+      controllers/
+      operations/
+    tests/
+      contacts.js
+      users.js
+      
+```
+Users are stored in PostgreSQL database, contacts are stored in FireStore.
 
 Create new user:
 
