@@ -26,7 +26,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 422421e8-78b7-4a8f-9c13-87958c039f40
+    secure: "n8SNyJ5Q2LdPmvrx7RyZm4ucPes98msbGybXkGFCbeLtoFvLv914O5AunVUC5Vs3f1EIXoqKdnFjLYY/FKK8laAvI1Hv5J8+l9BVYtos5+IA8+e1eBF5JcpkoCgDkEx1TyoJl6vwbp8mc17KQcDGk7X4dlBGswfn09iN6cTJS6NiF+jbriOYnhYct7fPd0Qsap1bjt2WftKqzwvyGnjaaPawW1Io3USmP+yoHm/SMY2r8viliqULrFV+F6iJWJvco5ok+SL4IpFeL7mQfSG22UGHOp2OejnHAmBHlNPOcBO0NpoV3qhN8qCgsrrTK1+e+3nRWKmHLPaFh4jASxMMwcEvT0cb+wjM4E8L3BG4VM/Mh9G3Vx6YoV3kDeaDnNqsanq6L7Yhsl/9xSNK9WPjk66CvSNQb2sR3qlU3O1/ZoUAbVMSwZp8PhMf9bDdigz3QWHrMYZPbuWtJDCt/x4Q5LlyWk8+cZT30tzcS4aMGM07Z4N+P2sVC9nirbsGvnfoqAQCV2zNGkxsNJIJnEbqApQI3qyChZjbY1xjnFY33DGy9BnOGmWAOFfW1O2bqdLvUZevuIq6768B7LaALpYr5YS3jy6qYolwO/MeX33g/0EvwStoHpuhMtcC0IcEw4nad/vpGzkLwlx4XUk5RN3nODFIVwm+ZDmEYH3Or0+htfk="
   app: strv-addressbook-lebeda-j
   strategy: git
   on:

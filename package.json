@@ -7,9 +7,7 @@
   "description": "RESTful API in Node.js for an AddressBook",
   "main": "app.js",
   "scripts": {
-    "test-old": "NODE_ENV=test mocha --config .mocharc.js",
-    "coverage": "nyc report --reporter=json",
-    "test": "NODE_ENV=test nyc mocha ./tests/*.js  --timeout 5000 --exit",
+    "test": "NODE_ENV=test nyc mocha ./tests/*.js  --timeout 3000 --exit",
     "start": "node src/app.js",
     "infra": "docker-compose up -d",
     "dev": "NODE_ENV=dev nodemon src/app.js",
