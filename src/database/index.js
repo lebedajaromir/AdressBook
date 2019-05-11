@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+/* eslint-disable new-cap */
 'use strict'
 
 const { Model } = require('objection')
@@ -5,28 +7,26 @@ const Knex = require('knex')
 const firebase = require('firebase-admin')
 const knexConfig = require('../config/knexfile')
 const config = require('./../config')
-// const firestoreServiceAccount = require('./../../firebase-service-account.json')
-const User = require('./postgres/models/user.js')
 
-async function connectUsersDB() {
+function connectUsersDB() {
   const knex = Knex(knexConfig)
   Model.knex(knex)
 }
 
 function connectContactsDB() {
-  // firebase.initializeApp({
-  // credential: firebase.credential.cert(firestoreServiceAccount),
-  // })
+  console.log(config.firestore.privateKey)
+  console.log(config.firestore.projectId)
+  console.log(config.firestore.clientEmail)
   firebase.initializeApp({
     credential: firebase.credential.cert({
       private_key: config.firestore.privateKey,
       project_id: config.firestore.projectId,
       client_email: config.firestore.clientEmail,
-
     }),
   })
 }
 
+// I could do this with migrations / seeding too
 
 async function truncateUsersDB(table) {
   const knex = Knex(knexConfig)
@@ -37,7 +37,6 @@ async function seedUsersDB() {
   const knex = Knex(knexConfig)
   await knex.seed.run()
 }
-
 
 module.exports = {
   connectUsersDB,

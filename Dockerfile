@@ -1,7 +1,7 @@
 FROM node:10
 
-RUN mkdir -p /adressbook/node_modules && chown -R node:node /adressbook
-WORKDIR /adressbook
+RUN mkdir -p /addressbook/node_modules && chown -R node:node /addressbook
+WORKDIR /addressbook
 COPY package*.json ./
 COPY ./firebase-service-account.json ./
 USER node

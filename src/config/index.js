@@ -1,10 +1,11 @@
 'use strict'
 
-const env = process.env.NODE_ENV || 'local'
+const env = process.env.NODE_ENV || 'dev'
 
 // Load process.env variables from .env file (when developing locally)
 // !! Do not move these lines, config variables have to be loaded before default config is loaded.
-if (env === 'local') {
+if (env === 'dev') {
+  // eslint-disable-next-line global-require
   require('dotenv').config({ silent: false })
 }
 

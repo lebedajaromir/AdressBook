@@ -10,14 +10,9 @@ async function create(user, input) {
     fname: input.fname,
     lname: input.lname,
     phone: input.phone,
-  })
-  return docRef.id
-  // .then(docRef => {
-  // console.log(docRef.id)
-  // })
-  // .catch(error => {
-  // console.error('Error adding document: ', error)
-  // })
+  }).catch(err => { console.log(err.message) })
+
+   return docRef.id
 }
 
 

@@ -5,6 +5,7 @@ const config = require('./index')
 
 module.exports = {
   client: 'pg',
+  // eslint-disable-next-line max-len
   connection: config.db.dburl ? config.db.dburl : { host: config.db.host, user: config.db.user, database: config.db.dbname },
   // connection: 'postgresql://postgres@localhost:5432/adressbook-users',
   migrations: {

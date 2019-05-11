@@ -2,6 +2,6 @@
 
 module.exports = {
   db: {
-    dburl: process.env.DATABASE_URL
+    dburl: process.env.DATABASE_URL,
   },
 }

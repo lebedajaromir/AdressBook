@@ -13,7 +13,7 @@ async function handleErrors(ctx, next) {
       responseError = new appErrors.InternalError(err)
     }
     logger.info(responseError.message)
-    const isDevelopment = ['local', 'test', 'development'].includes(config.env)
+    const isDevelopment = ['local', 'test', 'dev'].includes(config.env)
     ctx.status = responseError.status
     ctx.body = {
       type: responseError.type,

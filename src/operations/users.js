@@ -38,10 +38,7 @@ async function register(input) {
 }
 
 async function verifyTokenPayload(input) {
-  logger.info({ input }, 'verifyTokenPayload start')
-  // I want to catch error here - so If I use wrong jwtToken I wont get Internal Error. But is
-  // it right like this? with 'let'? (otherwise try - catch block is different scope
-  // than rest of the code and I can not use the variable jwtPayload)
+  logger.info({ input }, 'Start of verifyTokenPayload')
   let jwtPayload
   try {
     jwtPayload = await crypto.verifyAccessToken(input.jwtToken)
@@ -52,12 +49,12 @@ async function verifyTokenPayload(input) {
   if (!jwtPayload || !jwtPayload.exp || now >= jwtPayload.exp * 1000) {
     throw new errors.UnauthorizedError()
   }
-  const userId = Number(jwtPayload.userId)
+  const userId = jwtPayload.userId
   const user = await userRepository.findById(userId)
   if (!user) {
     throw new errors.UnauthorizedError()
   }
-  logger.info('verifyTokenPayload end')
+  logger.info('End of verifyTokenPayload')
   return {
     user,
     loginTimeout: jwtPayload.exp * 1000,
