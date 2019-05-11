@@ -18,18 +18,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lebedajaromir/AdressBook.git"
+    "url": "git+https://github.com/lebedajaromir/AddressBook.git"
   },
   "keywords": [
-    "adress",
+    "address",
     "book"
   ],
   "author": "Jaromir Lebeda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lebedajaromir/AdressBook/issues"
+    "url": "https://github.com/lebedajaromir/AddressBook/issues"
   },
-  "homepage": "https://github.com/lebedajaromir/AdressBook#readme",
+  "homepage": "https://github.com/lebedajaromir/AddressBook#readme",
   "devDependencies": {
     "@strv/eslint-config-javascript": "^9.2.0",
     "chai": "^4.2.0",

@@ -2,8 +2,8 @@
 
 module.exports = {
   db: {
-    dbserver: 'localhost',
-    dbname: 'adressbook-users',
+    dbserver: 'addressbook-users-db',
+    dbname: 'addressbook-users',
     user: 'postgres',
   },
 }
