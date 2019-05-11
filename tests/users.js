@@ -1,8 +1,7 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-undef */
 'use strict'
 
-// eslint-disable-next-line no-process-env
-//process.env.NODE_ENV = 'test'
 
 const chai = require('chai')
 const chaiHttp = require('chai-http')
