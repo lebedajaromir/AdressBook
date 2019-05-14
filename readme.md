@@ -4,7 +4,7 @@ Simple AddressBook api project. Allows clients to register new users and logging
 
 Users are stored in PostgreSQL database, contacts are stored in FireStore.
 
-Project can be run locally, test db can be created with Dockerfile that is also included. Docker compose can be used to dockeriye the whole solution. For demonstration purposes is project deployed to heroku too (using travis ci).
+Project can be run locally, test db can be created with Dockerfile that is also included. Docker compose can be used to dockerize the whole solution. For demonstration purposes is project deployed to heroku too (using travis ci).
 
 The url of project at heroku is
 
