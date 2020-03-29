@@ -1,6 +1,6 @@
 ### AddressBook NodeJS API project.
 
-This project is my output from STRV NodeJS nights 2019
+This project is my output from STRV NodeJS nights 2019.
 
 AddressBook api project. API allows clients to register new users and logging in for existing users. Logged in users can create new contacts. Each user has his own set of contacts.
 
