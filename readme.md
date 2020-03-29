@@ -1,6 +1,8 @@
 ### AddressBook NodeJS API project.
 
-Simple AddressBook api project. Allows clients to register new users and logging in for existing users. Logged in users can create new contacts. Each user has his own set of contacts.
+This project is my output from STRV NodeJS nights 2019
+
+AddressBook api project. API allows clients to register new users and logging in for existing users. Logged in users can create new contacts. Each user has his own set of contacts.
 
 Users are stored in PostgreSQL database, contacts are stored in FireStore.
 
